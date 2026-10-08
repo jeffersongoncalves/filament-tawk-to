@@ -13,9 +13,9 @@ description: Build and work with the Filament Tawk.to plugin — settings page a
 
 ## Package Overview
 
-- **Package**: `jeffersongoncalves/filament-tawk-to` (branch `2.x`)
+- **Package**: `jeffersongoncalves/filament-tawk-to` (branch `3.x`)
 - **Namespace**: `JeffersonGoncalves\Filament\TawkTo`
-- **Dependencies**: `jeffersongoncalves/filament-analytics-core:^2.0`, `jeffersongoncalves/laravel-tawk-to:^1.0`
+- **Dependencies**: `jeffersongoncalves/filament-analytics-core:^3.0`, `jeffersongoncalves/laravel-tawk-to:^1.0`
 
 ## Setup
 
