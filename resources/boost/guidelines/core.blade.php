@@ -6,7 +6,7 @@ Filament plugin for Tawk.to with a settings page powered by Spatie Laravel Setti
 
 @verbatim
 <code-snippet name="Install the plugin" lang="bash">
-composer require jeffersongoncalves/filament-tawk-to:"^1.0"
+composer require jeffersongoncalves/filament-tawk-to:"^2.0"
 php artisan vendor:publish --tag=tawk-to-settings-migrations
 php artisan migrate
 </code-snippet>

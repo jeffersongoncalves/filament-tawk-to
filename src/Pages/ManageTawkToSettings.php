@@ -2,25 +2,25 @@
 
 namespace JeffersonGoncalves\Filament\TawkTo\Pages;
 
-use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
-use Filament\Forms\Form;
 use Filament\Pages\SettingsPage;
+use Filament\Schemas\Components\Section;
+use Filament\Schemas\Schema;
 use JeffersonGoncalves\TawkTo\Settings\TawkToSettings;
 
 class ManageTawkToSettings extends SettingsPage
 {
     protected static string $settings = TawkToSettings::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-left-right';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-chat-bubble-left-right';
 
     public static function getNavigationLabel(): string
     {
         return __('filament-tawk-to::pages.navigation_label');
     }
 
-    public static function getNavigationGroup(): ?string
+    public static function getNavigationGroup(): string|\UnitEnum|null
     {
         return __('filament-tawk-to::pages.navigation_group');
     }
@@ -30,9 +30,10 @@ class ManageTawkToSettings extends SettingsPage
         return __('filament-tawk-to::pages.title');
     }
 
-    public function form(Form $form): Form
+    public function form(Schema $schema): Schema
     {
-        return $form
+        return $schema
+            ->columns(null)
             ->schema([
                 Section::make(__('filament-tawk-to::pages.sections.tawk_to.heading'))
                     ->description(__('filament-tawk-to::pages.sections.tawk_to.description'))
