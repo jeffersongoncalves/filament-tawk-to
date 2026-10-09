@@ -7,6 +7,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Pages\SettingsPage;
+use JeffersonGoncalves\FilamentAnalyticsCore\AbstractAnalyticsPlugin;
 use JeffersonGoncalves\TawkTo\Settings\TawkToSettings;
 
 class ManageTawkToSettings extends SettingsPage
@@ -22,7 +23,7 @@ class ManageTawkToSettings extends SettingsPage
 
     public static function getNavigationGroup(): ?string
     {
-        return __('filament-tawk-to::pages.navigation_group');
+        return AbstractAnalyticsPlugin::navigationGroupFor('filament-tawk-to') ?? __('filament-tawk-to::pages.navigation_group');
     }
 
     public function getTitle(): string
